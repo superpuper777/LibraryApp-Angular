@@ -1,0 +1,50 @@
+.books_list {
+  margin: 0 auto;
+  text-align: center;
+}
+
+.books {
+  display: inline-block;
+  text-align: start;
+  list-style-type: none;
+}
+
+.books li {
+  cursor: pointer;
+  padding: 1em;
+  margin: .6em;
+  background-color: rgb(178, 206, 202);
+  border-radius: 10px;
+}
+
+.books li:hover {
+  cursor: pointer;
+  background-color: rgb(133, 161, 157);
+}
+
+.author-book {
+  font-size: medium;
+  font-weight: 500;
+  color: #000;
+}
+
+.author-book:hover {
+  color: white;
+}
+
+.author-book.selected {
+  color: white;
+}
+
+.book__name {
+  font-style: italic;
+  color: dimgray;
+}
+
+.book__name:hover {
+  color: white;
+}
+
+.book__name.selected {
+  color: white;
+}

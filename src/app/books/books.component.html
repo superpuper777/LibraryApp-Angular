@@ -1,0 +1,16 @@
+<div class="books_list">
+  <h2 books__title-text>Books</h2>
+  <ul class="books">
+    <li *ngFor="let book of books">
+      <p class="author-book" (click)="onSelectAuthor()">{{book.author}}</p> <p class="book__name" [class.selected]="book === selectedBook" (click)="onSelectBook(book)" >{{book.name}}</p>
+    </li>
+  </ul>
+</div>
+
+<div class="book" *ngIf="selectedBook">
+<h2>{{selectedBook.name | uppercase}}</h2>
+<div><span>author: </span><a href="#!">{{selectedBook.author}}</a></div>
+<div><span>genre: </span><a href="#!">{{selectedBook.genre}}</a></div>
+<div><span>summary: </span>{{selectedBook.summary}}</div>
+</div>
+
