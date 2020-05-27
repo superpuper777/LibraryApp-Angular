@@ -9,6 +9,7 @@ import { BOOKS } from '../mock-books';
   styleUrls: ['./books.component.css'],
 })
 export class BooksComponent implements OnInit {
+  addingBook: boolean;
   selectedBook: Book;
   books = BOOKS;
 
@@ -23,5 +24,13 @@ export class BooksComponent implements OnInit {
   onSelectBook(book: Book): void {
     this.selectedBook = book;
     console.log(book);
+  }
+
+  showAddBookForm(): void {
+    this.addingBook = true;
+  }
+
+  addNewBook(book: Book) {
+    this.books.push(book);
   }
 }

@@ -5,12 +5,12 @@
       <p class="author-book" (click)="onSelectAuthor()">{{book.author}}</p> <p class="book__name" [class.selected]="book === selectedBook" (click)="onSelectBook(book)" >{{book.name}}</p>
     </li>
   </ul>
+  <div>
+    <button type="button" class="btn btn-primary" (click)="showAddBookForm()">Add new book</button>
+  </div>
 </div>
 
-<div class="book" *ngIf="selectedBook">
-<h2>{{selectedBook.name | uppercase}}</h2>
-<div><span>author: </span><a href="#!">{{selectedBook.author}}</a></div>
-<div><span>genre: </span><a href="#!">{{selectedBook.genre}}</a></div>
-<div><span>summary: </span>{{selectedBook.summary}}</div>
-</div>
+<app-new-book-form *ngIf='addingBook' (onAddNewBook)="addNewBook($event)"></app-new-book-form>
+
+<app-book [book]="selectedBook"></app-book>
 
