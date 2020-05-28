@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 
 import { Book } from './../book';
 
@@ -9,11 +9,17 @@ import { Book } from './../book';
 })
 export class BookComponent implements OnInit {
   @Input() book: Book;
+
+  @Input() books: Book[];
   constructor() {}
 
   ngOnInit(): void {}
 
   showEditBookForm(): void {
     console.log('edit book');
+  }
+
+  removeBook(book: Book) {
+    console.log(this.books.filter((b) => b !== book));
   }
 }

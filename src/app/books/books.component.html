@@ -12,5 +12,5 @@
 
 <app-new-book-form *ngIf='addingBook' (onAddNewBook)="addNewBook($event)"></app-new-book-form>
 
-<app-book [book]="selectedBook"></app-book>
+<app-book [book]="selectedBook" [books]="books"></app-book>
 

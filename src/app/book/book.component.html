@@ -4,5 +4,5 @@
   <div><span>Genre: </span><a href="#!">{{book.genre}}</a></div>
   <div><span>Summary: </span>{{book.summary}}</div>
   <button type="button" class="btn btn-info" (click)="showEditBookForm()">Edit book</button>
-  <button type="button" class="btn btn-danger">Delete book</button>
+  <button type="button" class="btn btn-danger" (click)="removeBook(book)">Delete book</button>
   </div>
