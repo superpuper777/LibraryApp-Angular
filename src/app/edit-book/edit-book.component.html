@@ -1,0 +1,41 @@
+<div class="newBookForm">
+  <h1>Edit book</h1>
+  <div class="form-group">
+    <label for="name">Name</label>
+    <input type="text" 
+    [(ngModel)]="book.name" 
+    >
+  </div>
+  
+  <div class="form-group">
+    <div>
+      <label class="newBook_label" for="author">Author</label>
+    </div>
+   <div>
+    <input class="newBook_input" type="text"
+    [(ngModel)]="book.author"
+    >
+   </div>
+   
+  </div>
+ 
+  <div class="form-group">
+    <label for="genre">Genre</label>
+    <select [(ngModel)]="book.genre" name="genre">
+      <option *ngFor="let genre of genres" [value]="genre">{{genre}}</option>
+    </select>
+  </div>
+  
+  <div class="form-group">
+    <label for="summary">Summary</label>
+    <textarea
+    name="text"
+    cols="20"
+    rows="5"
+    [(ngModel)]="book.summary">
+    </textarea>
+  </div>
+
+  <button type="button" class="btn btn-success" (click)="saveChangesOfBook()">Save changes</button>
+</div>
+

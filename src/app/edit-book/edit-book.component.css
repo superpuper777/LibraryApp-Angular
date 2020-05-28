@@ -1,0 +1,13 @@
+.newBookForm {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
+}
+
+.form-group {
+  width: 18em;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}

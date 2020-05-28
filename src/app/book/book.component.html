@@ -6,3 +6,7 @@
   <button type="button" class="btn btn-info" (click)="showEditBookForm()">Edit book</button>
   <button type="button" class="btn btn-danger" (click)="removeBook(book)">Delete book</button>
   </div>
+
+
+<app-edit-book *ngIf="isShowEdit" [book]="book" (onEditBook)="editBook($event)"></app-edit-book>
+

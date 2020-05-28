@@ -8,6 +8,7 @@ import { Book } from './../book';
   styleUrls: ['./book.component.css'],
 })
 export class BookComponent implements OnInit {
+  isShowEdit: boolean = false;
   @Input() book: Book;
 
   @Input() books: Book[];
@@ -16,10 +17,14 @@ export class BookComponent implements OnInit {
   ngOnInit(): void {}
 
   showEditBookForm(): void {
-    console.log('edit book');
+    this.isShowEdit = true;
   }
 
   removeBook(book: Book) {
     console.log(this.books.filter((b) => b !== book));
+  }
+
+  editBook(book: Book): void {
+    console.log(this.book);
   }
 }
