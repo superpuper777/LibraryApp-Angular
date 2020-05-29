@@ -26,11 +26,6 @@ export class EditBookComponent implements OnInit {
   ngOnInit(): void {}
 
   saveChangesOfBook() {
-    this.book.name = this.name;
-    this.book.author = this.author;
-    this.book.genre = this.genre;
-    this.book.summary = this.summary;
-
     this.onEditBook.emit(this.book);
   }
 }

@@ -25,6 +25,6 @@ export class BookComponent implements OnInit {
   }
 
   editBook(book: Book): void {
-    console.log(this.book);
+    console.log(book);
   }
 }
