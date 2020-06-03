@@ -31,6 +31,14 @@ export const BOOKS: Book[] = [
     summary: `A young woman who will shortly inherit control of a large manufacturing firm wants to rent a room in Nero Wolfe's house. Wolfe, outraged, puts her out; she is found murdered later that night. With no client in sight, Wolfe is not interested, but Archie feels responsible. His first step is to crash a meeting of the manufacturer's board of directors.`,
   },
   {
+    id: 10,
+    name: `The Silent Speaker`,
+    author: 'Rex Stout',
+    genre: 'detective novel',
+    summary: `Cheney Boone, the Director of the Bureau of Price Regulation (BPR) is beaten to death with a monkey wrench shortly before a speech he is to deliver at a gathering of the National Industrial Association (NIA), a prominent conglomeration of big business interests. Considerable antagonism exists between the two parties, and the public begins to hold the NIA responsible for Boone's murder. This attracts the attention of Nero Wolfe, who is facing financial ruin, and with the help of Archie Goodwin he launches a scheme to manipulate the NIA into hiring his services to find the killer.`,
+  },
+
+  {
     id: 8,
     name: 'Robinson Crusoe',
     author: 'Daniel Defoe',

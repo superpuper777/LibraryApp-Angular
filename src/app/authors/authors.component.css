@@ -1,0 +1,49 @@
+.author__list {
+  margin: 0 auto;
+  text-align: center;
+}
+
+.authors {
+  margin-left: 0;
+  padding-left: 0;
+  display: inline-block;
+  text-align: start;
+  list-style-type: none;
+}
+
+.author-item {
+  cursor: pointer;
+  padding: 1em;
+  margin: .6em;
+  background-color: rgb(178, 206, 202);
+  border-radius: 10px;
+}
+
+.author-item:hover {
+  cursor: pointer;
+  background-color: rgb(133, 161, 157);
+}
+
+.author {
+  font-size: medium;
+  font-weight: 500;
+  color: #000;
+}
+
+.author:hover {
+  color: white;
+}
+
+.author.selected {
+  color: white;
+}
+
+.select-list {
+  margin: 0 auto;
+  height: 50px;
+}
+
+.form-control {
+  margin: 0 auto;
+  width: 200px;
+}

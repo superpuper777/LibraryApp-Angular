@@ -1,0 +1,18 @@
+<div class="author__list">
+  <h2 class="author__name">
+    Authors
+  </h2>
+  <ul class="authors">
+    <li class="author-item" *ngFor="let author of authors">
+      <p class="author" (click)="onSelectAuthor(author)" [class.selected]="author === selectedAuthor">{{author.name}}</p>
+    </li>
+    <div *ngIf="selectedAuthor" class="select-list" >
+      <select class="form-control" name="select" > 
+        <option value="author" selected >{{selectedAuthor.name}}</option> 
+        <option *ngFor="let book of selectedAuthor.books">{{book}}</option>
+      </select>
+    </div>
+  </ul>
+</div>
+
+

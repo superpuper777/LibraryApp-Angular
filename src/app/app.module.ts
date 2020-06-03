@@ -8,9 +8,10 @@ import { BooksComponent } from './books/books.component';
 import { BookComponent } from './book/book.component';
 import { NewBookFormComponent } from './new-book-form/new-book-form.component';
 import { EditBookComponent } from './edit-book/edit-book.component';
+import { AuthorsComponent } from './authors/authors.component';
 
 @NgModule({
-  declarations: [AppComponent, BooksComponent, BookComponent, NewBookFormComponent, EditBookComponent],
+  declarations: [AppComponent, BooksComponent, BookComponent, NewBookFormComponent, EditBookComponent, AuthorsComponent],
   imports: [BrowserModule, FormsModule],
   providers: [],
   bootstrap: [AppComponent],
