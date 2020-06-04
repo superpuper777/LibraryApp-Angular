@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 
 import { Book } from '../book';
 import { BOOKS } from '../mock-books';
+import { Author } from './../author';
+import { AUTHORS } from './../mock-authors';
 
 @Component({
   selector: 'app-books',
@@ -13,12 +15,16 @@ export class BooksComponent implements OnInit {
   selectedBook: Book;
   books = BOOKS;
 
+  author: Author;
+  selectedAuthor: Author;
+  authors = AUTHORS;
   constructor() {}
 
   ngOnInit(): void {}
 
-  onSelectAuthor() {
-    console.log('I selected Author');
+  onSelectAuthor(author: Author): void {
+    this.selectedAuthor = author;
+    console.log(typeof author);
   }
 
   onSelectBook(book: Book): void {

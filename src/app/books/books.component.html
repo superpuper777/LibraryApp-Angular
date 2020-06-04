@@ -1,9 +1,10 @@
 <div class="books_list">
   <h2 books__title-text>Books</h2>
   <ul class="books">
-    <li *ngFor="let book of books">
-      <p class="author-book" (click)="onSelectAuthor()">{{book.author}}</p> <p class="book__name" [class.selected]="book === selectedBook" (click)="onSelectBook(book)" >{{book.name}}</p>
-    </li>
+      <li *ngFor="let author of authors">
+        <p class="author-book" [class.selected]="author === selectedAuthor" (click)="onSelectAuthor(author)">{{author.name}}</p> 
+        <p *ngFor="let book of author.books" class="book__name" [class.selected]="book === selectedBook" (click)="onSelectBook(book)" >{{book}}</p>
+       </li>  
   </ul>
   <div>
     <button type="button" class="btn btn-primary" (click)="showAddBookForm()">Add new book</button>
@@ -13,4 +14,6 @@
 <app-new-book-form *ngIf='addingBook' (onAddNewBook)="addNewBook($event)"></app-new-book-form>
 
 <app-book [book]="selectedBook" [books]="books"></app-book>
+
+<app-author [author]="selectedAuthor"></app-author>
 
