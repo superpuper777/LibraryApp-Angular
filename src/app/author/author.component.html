@@ -2,7 +2,7 @@
   <h2>{{author.name | uppercase}}</h2>
   <div><span>Name: </span><a href="#!">{{author.name}}</a></div>
   <div><span>Biography: </span>{{author.biography}}</div>
-  <div><span>Books: </span><a *ngFor="let book of author.books"ref="#!">{{book.name}}</a></div>
+  <div><span>Books: </span><a *ngFor="let book of author.books; let isLast = last" ref="#!">{{book.name}}{{isLast ? '' : ',&nbsp;'}}</a></div>
   <button type="button" class="btn btn-info" >Edit book</button>    <!--  (click)="showEditAuthorForm()" -->
   <button type="button" class="btn btn-danger" >Delete book</button> <!-- (click)="removeBook(book)" -->
 </div>
