@@ -9,7 +9,7 @@
     <div *ngIf="selectedAuthor" class="select-list" >
       <select class="form-control" name="select" > 
         <option value="author" selected >{{selectedAuthor.name}}</option> 
-        <option *ngFor="let book of selectedAuthor.books">{{book}}</option>
+        <option *ngFor="let book of selectedAuthor.books">{{book.name}}</option>
       </select>
     </div>
   </ul>

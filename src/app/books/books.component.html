@@ -3,7 +3,7 @@
   <ul class="books">
       <li *ngFor="let author of authors">
         <p class="author-book" [class.selected]="author === selectedAuthor" (click)="onSelectAuthor(author)">{{author.name}}</p> 
-        <p *ngFor="let book of author.books" class="book__name" [class.selected]="book === selectedBook" (click)="onSelectBook(book)" >{{book}}</p>
+        <p *ngFor="let book of author.books" class="book__name" [class.selected]="book === selectedBook" (click)="onSelectBook(book)" >{{book.name}}</p>
        </li>  
   </ul>
   <div>
