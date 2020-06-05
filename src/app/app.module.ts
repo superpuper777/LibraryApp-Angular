@@ -10,9 +10,10 @@ import { NewBookFormComponent } from './new-book-form/new-book-form.component';
 import { EditBookComponent } from './edit-book/edit-book.component';
 import { AuthorsComponent } from './authors/authors.component';
 import { AuthorComponent } from './author/author.component';
+import { EditAuthorComponent } from './edit-author/edit-author.component';
 
 @NgModule({
-  declarations: [AppComponent, BooksComponent, BookComponent, NewBookFormComponent, EditBookComponent, AuthorsComponent, AuthorComponent],
+  declarations: [AppComponent, BooksComponent, BookComponent, NewBookFormComponent, EditBookComponent, AuthorsComponent, AuthorComponent, EditAuthorComponent],
   imports: [BrowserModule, FormsModule],
   providers: [],
   bootstrap: [AppComponent],

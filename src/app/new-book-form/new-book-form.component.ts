@@ -41,6 +41,6 @@ export class NewBookFormComponent implements OnInit {
       this.name = this.author = this.summary = '';
     }
 
-    console.log('New book');
+    console.log(this.book);
   }
 }

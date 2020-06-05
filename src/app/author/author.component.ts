@@ -7,8 +7,22 @@ import { Author } from './../author';
   styleUrls: ['./author.component.css'],
 })
 export class AuthorComponent implements OnInit {
+  isShowEdit: boolean = false;
   @Input() author: Author;
+  @Input() authors: Author[];
   constructor() {}
 
   ngOnInit(): void {}
+
+  showEditAuthorForm(): void {
+    this.isShowEdit = true;
+  }
+
+  removeAuthor(author: Author): void {
+    console.log(this.authors.filter((a) => a !== author));
+  }
+
+  editAuthor(author: Author): void {
+    console.log(author);
+  }
 }
