@@ -37,6 +37,8 @@ export class BooksComponent implements OnInit {
   }
 
   addNewBook(book: Book) {
+    console.log(book);
     this.books.push(book);
+    console.log(this.books);
   }
 }

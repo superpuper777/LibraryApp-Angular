@@ -1,3 +1,4 @@
+import { Author } from './../author';
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { Book } from './../book';
 
@@ -12,6 +13,8 @@ export class NewBookFormComponent implements OnInit {
   genre = '';
   summary = '';
   id = Math.floor(Math.random() * 100);
+
+  @Input() authors;
   @Output() onAddNewBook: EventEmitter<Book> = new EventEmitter();
   book: Book;
 
@@ -28,19 +31,18 @@ export class NewBookFormComponent implements OnInit {
   ngOnInit(): void {}
 
   addNewBook() {
-    if (this.name.trim() && this.author.trim()) {
+    if (this.name.trim()) {
       const book: Book = {
-        id: 1,
+        id: this.id,
         name: this.name,
         author: this.author,
         genre: this.genre,
         summary: this.summary,
       };
-
+      console.log(book);
       this.onAddNewBook.emit(book);
+
       this.name = this.author = this.summary = '';
     }
-
-    console.log(this.book);
   }
 }

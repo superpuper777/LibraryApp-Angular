@@ -1,3 +1,5 @@
+import { Author } from './author';
+
 export interface Book {
   id: number;
   // id_author: number;

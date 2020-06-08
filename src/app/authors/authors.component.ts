@@ -22,4 +22,9 @@ export class AuthorsComponent implements OnInit {
     console.log(author);
     // this.isAuthorSelected = true;
   }
+
+  addNewAuthor(author: Author): void {
+    console.log(`THis is authors.comp:${author}`);
+    // this.authors.push(author);
+  }
 }
