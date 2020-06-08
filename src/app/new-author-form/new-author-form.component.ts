@@ -31,6 +31,5 @@ export class NewAuthorFormComponent implements OnInit {
       console.log(author);
       this.name = this.biography = '';
     }
-    console.log(`Add new author:${this.author}`);
   }
 }

@@ -38,7 +38,19 @@ export class BooksComponent implements OnInit {
 
   addNewBook(book: Book) {
     console.log(book);
-    this.books.push(book);
+    //this.books.push(book);
+
+    let test = {
+      id: 45,
+      name: book.author,
+      biography: 'qwe',
+      books: [],
+    };
+    test.books.push(book);
+
+    this.authors.push(test);
+
+    //this.authors = [...this.authors];
     console.log(this.books);
   }
 }

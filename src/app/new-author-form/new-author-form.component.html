@@ -17,12 +17,12 @@
     </textarea>
   </div>
 
-  <!-- <div *ngIf="author.books.length >= 1" class="form-group">
+  <div *ngIf="author?.books.length >= 1" class="form-group">
     <label for="author">Books</label>
     <select [(ngModel)]="author" name="author">
       <option *ngFor="let book of author.books" [value]="book">{{book.name}}</option>
     </select>
-  </div> -->
+  </div>
 
   <button type="button" class="btn btn-default" (click)="addNewAuthor()">Add Author</button>
 </div>

@@ -25,6 +25,6 @@ export class AuthorsComponent implements OnInit {
 
   addNewAuthor(author: Author): void {
     console.log(`THis is authors.comp:${author}`);
-    // this.authors.push(author);
+    this.authors.push(author);
   }
 }
