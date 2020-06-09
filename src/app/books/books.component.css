@@ -48,3 +48,7 @@
 .book__name.selected {
   color: white;
 }
+
+a {
+  text-decoration: none;
+}

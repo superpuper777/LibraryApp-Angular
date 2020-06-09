@@ -13,6 +13,7 @@ export class AuthorsComponent implements OnInit {
   authors = AUTHORS;
 
   isAuthorSelected = false;
+  isAddingAuthor = false;
   constructor() {}
 
   ngOnInit(): void {}
@@ -21,6 +22,10 @@ export class AuthorsComponent implements OnInit {
     this.selectedAuthor = author;
     console.log(author);
     // this.isAuthorSelected = true;
+  }
+
+  showAddAuthorForm() {
+    this.isAddingAuthor = true;
   }
 
   addNewAuthor(author: Author): void {

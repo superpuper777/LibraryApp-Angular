@@ -1,4 +1,12 @@
-<app-books></app-books>
-<app-authors></app-authors>
+<div class="main">
+  <h1 class="main__title">{{title}}</h1>
+  <nav class="main__links">
+    <a class="books__link link" routerLink="/books">Books</a>
+    <a class="authors__link link" routerLink="/authors">Authors</a>
+  </nav>
+  <router-outlet></router-outlet>
+</div>
+
+<!-- <app-authors></app-authors> -->
 
 

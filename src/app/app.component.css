@@ -1,0 +1,28 @@
+.main__title,
+.main__links {
+  text-align: center;
+}
+
+.main__links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  font-size: large;
+  text-decoration: none;
+}
+
+.link {
+  color: #0b1213;
+  text-decoration: none;
+}
+
+.link:hover,
+.link:focus,
+.link:active {
+  opacity: .7;
+}
+
+.books__link {
+  margin-right: 60px;
+
+}

@@ -3,7 +3,7 @@
   <ul class="books">
       <li *ngFor="let author of authors">
         <p class="author-book" [class.selected]="author === selectedAuthor" (click)="onSelectAuthor(author)">{{author.name}}</p> 
-        <p *ngFor="let book of author.books" class="book__name" [class.selected]="book === selectedBook" (click)="onSelectBook(book)" >{{book.name}}</p>
+        <p *ngFor="let book of author.books" class="book__name" [class.selected]="book === selectedBook" (click)="onSelectBook(book)"><a class="book__name" routerLink="/book/{{book.id}}">{{book.name}}</a></p>
        </li>  
   </ul>
   <div>
@@ -11,9 +11,9 @@
   </div>
 </div>
 
-<app-new-book-form *ngIf='addingBook' [authors]="authors" (onAddNewBook)="addNewBook($event)"></app-new-book-form>
+<!-- <app-new-book-form *ngIf='addingBook' [authors]="authors" (onAddNewBook)="addNewBook($event)"></app-new-book-form> -->
 
-<app-book [book]="selectedBook" [books]="books"></app-book>
+<!-- <app-book [book]="selectedBook" [books]="books"></app-book> -->
 
-<app-author [author]="selectedAuthor" [authors]="authors"></app-author>
+<!-- <app-author [author]="selectedAuthor" [authors]="authors"></app-author> -->
 

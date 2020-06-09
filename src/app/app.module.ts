@@ -12,10 +12,11 @@ import { AuthorsComponent } from './authors/authors.component';
 import { AuthorComponent } from './author/author.component';
 import { EditAuthorComponent } from './edit-author/edit-author.component';
 import { NewAuthorFormComponent } from './new-author-form/new-author-form.component';
+import { AppRoutingModule } from './app-routing.module';
 
 @NgModule({
   declarations: [AppComponent, BooksComponent, BookComponent, NewBookFormComponent, EditBookComponent, AuthorsComponent, AuthorComponent, EditAuthorComponent, NewAuthorFormComponent],
-  imports: [BrowserModule, FormsModule],
+  imports: [BrowserModule, FormsModule, AppRoutingModule],
   providers: [],
   bootstrap: [AppComponent],
 })

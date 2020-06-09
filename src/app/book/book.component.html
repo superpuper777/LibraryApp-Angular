@@ -5,8 +5,8 @@
   <div><span>Summary: </span>{{book.summary}}</div>
   <button type="button" class="btn btn-info" (click)="showEditBookForm()">Edit book</button>
   <button type="button" class="btn btn-danger" (click)="removeBook(book)">Delete book</button>
+  <button (click)="goBack()">go back</button>
 </div>
-
 
 <app-edit-book *ngIf="isShowEdit" [book]="book" (onEditBook)="editBook($event)"></app-edit-book>
 
