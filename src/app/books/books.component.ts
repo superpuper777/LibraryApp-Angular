@@ -28,15 +28,15 @@ export class BooksComponent implements OnInit {
     this.bookService.getBooks().subscribe((books) => (this.books = books));
   }
 
-  onSelectAuthor(author: Author): void {
-    this.selectedAuthor = author;
-    console.log(typeof author);
-  }
+  // onSelectAuthor(author: Author): void {
+  //   this.selectedAuthor = author;
+  //   console.log(typeof author);
+  // }
 
-  onSelectBook(book: Book): void {
-    this.selectedBook = book;
-    console.log(book);
-  }
+  // onSelectBook(book: Book): void {
+  //   this.selectedBook = book;
+  //   console.log(book);
+  // }
 
   showAddBookForm(): void {
     this.addingBook = true;

@@ -2,8 +2,8 @@
   <h2 books__title-text>Books</h2>
   <ul class="books">
       <li *ngFor="let author of authors">
-        <p class="author-book" [class.selected]="author === selectedAuthor" (click)="onSelectAuthor(author)">{{author.name}}</p> 
-        <p *ngFor="let book of author.books" class="book__name" [class.selected]="book === selectedBook" (click)="onSelectBook(book)"><a class="book__name" routerLink="/book/{{book.id}}">{{book.name}}</a></p>
+        <p class="author-book"><a class="author__name" routerLink="/author/{{author.id}}">{{author.name}}</a></p> 
+        <p *ngFor="let book of author.books" class="book__name"><a class="book__name" routerLink="/book/{{book.id}}">{{book.name}}</a></p>
        </li>  
   </ul>
   <div>

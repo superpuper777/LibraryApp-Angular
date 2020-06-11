@@ -1,6 +1,6 @@
 <div class="book" *ngIf="book">
   <h2>{{book.name | uppercase}}</h2>
-  <div><span>Author: </span><a href="#!">{{book.author}}</a></div>
+  <div><span>Author: </span><a routerLink="/authors">{{book.author}}</a></div>
   <div><span>Genre: </span><a href="#!">{{book.genre}}</a></div>
   <div><span>Summary: </span>{{book.summary}}</div>
   <button type="button" class="btn btn-info" (click)="showEditBookForm()">Edit book</button>

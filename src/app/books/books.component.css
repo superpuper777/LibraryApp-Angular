@@ -22,13 +22,13 @@
   background-color: rgb(133, 161, 157);
 }
 
-.author-book {
+.author__name {
   font-size: medium;
   font-weight: 500;
   color: #000;
 }
 
-.author-book:hover {
+.author__name:hover {
   color: white;
 }
 

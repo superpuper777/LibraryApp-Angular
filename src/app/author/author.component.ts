@@ -1,4 +1,8 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+import { Location } from '@angular/common';
+
+import { BookService } from './../book.service';
 import { Author } from './../author';
 
 @Component({
@@ -10,9 +14,22 @@ export class AuthorComponent implements OnInit {
   isShowEdit: boolean = false;
   @Input() author: Author;
   @Input() authors: Author[];
-  constructor() {}
+  constructor(
+    private route: ActivatedRoute,
+    private bookService: BookService,
+    private location: Location
+  ) {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.getAuthor();
+  }
+
+  getAuthor(): void {
+    const id = +this.route.snapshot.paramMap.get('id');
+    this.bookService
+      .getAuthor(id)
+      .subscribe((author) => (this.author = author));
+  }
 
   showEditAuthorForm(): void {
     this.isShowEdit = true;
@@ -24,5 +41,8 @@ export class AuthorComponent implements OnInit {
 
   editAuthor(author: Author): void {
     console.log(author);
+  }
+  goBack(): void {
+    this.location.back();
   }
 }
