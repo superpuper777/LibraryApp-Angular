@@ -8,13 +8,13 @@
     </li>
     <div *ngIf="selectedAuthor" class="select-list" >
       <select class="form-control" name="select" > 
-        <option value="author" selected >{{selectedAuthor.name}}</option> 
+        <option value="author" selected><a routerLink="/author/{{selectedAuthor.id}}">{{selectedAuthor.name}}</a></option> 
         <option *ngFor="let book of selectedAuthor.books">{{book.name}}</option>
       </select>
     </div>
   </ul>
   <div>
-    <button type="button" class="btn btn-primary" (click)="showAddAuthorForm()">Add new book</button>
+    <button type="button" class="btn btn-primary" (click)="showAddAuthorForm()">Add new author</button>
   </div>
 </div>
 

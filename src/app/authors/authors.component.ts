@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { AUTHORS } from './../mock-authors';
+import { ActivatedRoute } from '@angular/router';
+import { Location } from '@angular/common';
+import { AuthorService } from './../author.service';
+
 import { Author } from './../author';
 
 @Component({
@@ -10,13 +13,21 @@ import { Author } from './../author';
 export class AuthorsComponent implements OnInit {
   author: Author;
   selectedAuthor: Author;
-  authors = AUTHORS;
+  authors: Author[];
 
   isAuthorSelected = false;
   isAddingAuthor = false;
-  constructor() {}
+  constructor(private authorService: AuthorService) {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.getAuthors();
+  }
+
+  getAuthors(): void {
+    this.authorService
+      .getAuthors()
+      .subscribe((authors) => (this.authors = authors));
+  }
 
   onSelectAuthor(author: Author): void {
     this.selectedAuthor = author;
