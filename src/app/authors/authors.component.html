@@ -6,11 +6,15 @@
     <li class="author-item" *ngFor="let author of authors">
       <p class="author" (click)="onSelectAuthor(author)" [class.selected]="author === selectedAuthor">{{author.name}}</p>
     </li>
-    <div *ngIf="selectedAuthor" class="select-list" >
-      <select class="form-control" name="select" > 
-        <option value="author" selected><a routerLink="/author/{{selectedAuthor.id}}">{{selectedAuthor.name}}</a></option> 
-        <option *ngFor="let book of selectedAuthor.books">{{book.name}}</option>
-      </select>
+    <div *ngIf="selectedAuthor" class="authors-table">
+      <table class="authors-table">
+        <tr>
+          <th>Author</th>
+          <th>Author's books</th>
+        </tr>
+        <td><p><a routerLink="/author/{{selectedAuthor.id}}">{{selectedAuthor.name}}</a></p></td>
+        <td><p *ngFor="let book of selectedAuthor.books"><a routerLink="/book/{{book.id}}">{{book.name}}</a></p></td>
+      </table>
     </div>
   </ul>
   <div>

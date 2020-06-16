@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Location } from '@angular/common';
+
 import { AuthorService } from './../author.service';
 
 import { Author } from './../author';
@@ -15,9 +16,12 @@ export class AuthorsComponent implements OnInit {
   selectedAuthor: Author;
   authors: Author[];
 
-  isAuthorSelected = false;
   isAddingAuthor = false;
-  constructor(private authorService: AuthorService) {}
+  constructor(
+    private route: ActivatedRoute,
+    private authorService: AuthorService,
+    private location: Location
+  ) {}
 
   ngOnInit(): void {
     this.getAuthors();
@@ -31,8 +35,6 @@ export class AuthorsComponent implements OnInit {
 
   onSelectAuthor(author: Author): void {
     this.selectedAuthor = author;
-    console.log(author);
-    // this.isAuthorSelected = true;
   }
 
   showAddAuthorForm() {
