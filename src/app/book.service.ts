@@ -17,6 +17,10 @@ export class BookService {
     return of(BOOKS);
   }
 
+  createBook(book: Book): Observable<Book> {
+    return of(book);
+  }
+
   getBook(id: number): Observable<Book> {
     return of(BOOKS.find((book) => book.id === id));
   }

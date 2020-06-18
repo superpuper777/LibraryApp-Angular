@@ -1,5 +1,8 @@
-import { Author } from './../author';
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+import { Location } from '@angular/common';
+import { BookService } from './../book.service';
+
 import { Book } from './../book';
 
 @Component({
@@ -26,7 +29,11 @@ export class NewBookFormComponent implements OnInit {
     'Horror',
   ];
 
-  constructor() {}
+  constructor(
+    private route: ActivatedRoute,
+    private bookService: BookService,
+    private location: Location
+  ) {}
 
   ngOnInit(): void {}
 
@@ -44,5 +51,9 @@ export class NewBookFormComponent implements OnInit {
 
       this.name = this.author = this.summary = '';
     }
+  }
+
+  goBack(): void {
+    this.location.back();
   }
 }

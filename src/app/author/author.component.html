@@ -5,7 +5,7 @@
   <div><span>Books: </span><a *ngFor="let book of author.books; let isLast = last" ref="#!">{{book.name}}{{isLast ? '' : ',&nbsp;'}}</a></div>
   <button type="button" class="btn btn-info" (click)="showEditAuthorForm()">Edit author</button> 
   <button type="button" class="btn btn-danger" (click)="removeAuthor(author)" >Delete author</button>
-  <button (click)="goBack()">go back</button>
+  <button class="btn btn-default" (click)="goBack()">go back</button>
 </div>
 
 <app-edit-author *ngIf="isShowEdit" [author]="author" (onEditAuthor)="editAuthor($event)"></app-edit-author>

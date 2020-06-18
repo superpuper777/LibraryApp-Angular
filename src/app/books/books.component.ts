@@ -43,9 +43,6 @@ export class BooksComponent implements OnInit {
   }
 
   addNewBook(book: Book) {
-    console.log(book);
-    //this.books.push(book);
-
     let test = {
       id: 45,
       name: book.author,
@@ -55,8 +52,8 @@ export class BooksComponent implements OnInit {
     test.books.push(book);
 
     this.authors.push(test);
-
-    //this.authors = [...this.authors];
-    console.log(this.books);
+    this.bookService
+      .createBook(book)
+      .subscribe((book) => this.books.push(book));
   }
 }

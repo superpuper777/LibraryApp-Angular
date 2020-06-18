@@ -1,4 +1,6 @@
 import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+import { Location } from '@angular/common';
 
 import { Author } from './../author';
 
@@ -14,7 +16,7 @@ export class NewAuthorFormComponent implements OnInit {
   id = Math.floor(Math.random() * 100);
 
   @Output() onAddNewAuthor: EventEmitter<Author> = new EventEmitter();
-  constructor() {}
+  constructor(private route: ActivatedRoute, private location: Location) {}
 
   ngOnInit(): void {}
 
@@ -31,5 +33,8 @@ export class NewAuthorFormComponent implements OnInit {
       console.log(author);
       this.name = this.biography = '';
     }
+  }
+  goBack(): void {
+    this.location.back();
   }
 }

@@ -18,9 +18,9 @@
     </div>
   </ul>
   <div>
-    <button type="button" class="btn btn-primary" (click)="showAddAuthorForm()">Add new author</button>
+    <button type="button" class="btn btn-primary" routerLink="/authors/new">Add new author</button>
   </div>
 </div>
 
-<app-new-author-form *ngIf="isAddingAuthor" (onAddNewAuthor)="addNewAuthor($event)"></app-new-author-form>
+<!-- <app-new-author-form *ngIf="isAddingAuthor" (onAddNewAuthor)="addNewAuthor($event)"></app-new-author-form> -->
 
