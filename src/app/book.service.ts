@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Observable, of } from 'rxjs';
+import { HttpClient } from '@angular/common/http';
 
 import { Book } from './book';
 import { BOOKS } from './mock-books';
@@ -11,10 +12,12 @@ import { AUTHORS } from './mock-authors';
   providedIn: 'root',
 })
 export class BookService {
-  constructor() {}
+  private SERVER_URL = 'http://localhost:3000/books';
 
-  getBooks(): Observable<Book[]> {
-    return of(BOOKS);
+  constructor(private httpClient: HttpClient) {}
+
+  public getBooks() {
+    return this.httpClient.get(this.SERVER_URL);
   }
 
   createBook(book: Book): Observable<Book> {

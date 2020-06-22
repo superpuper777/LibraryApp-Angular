@@ -28,9 +28,10 @@ export class AuthorsComponent implements OnInit {
   }
 
   getAuthors(): void {
-    this.authorService
-      .getAuthors()
-      .subscribe((authors) => (this.authors = authors));
+    this.authorService.getAuthors().subscribe((data: any[]) => {
+      console.log(data);
+      this.authors = data;
+    });
   }
 
   onSelectAuthor(author: Author): void {

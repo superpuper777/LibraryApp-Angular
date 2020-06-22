@@ -1,7 +1,9 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Location } from '@angular/common';
+
 import { BookService } from './../book.service';
+import { AuthorService } from './../author.service';
 
 import { Book } from './../book';
 
@@ -30,12 +32,16 @@ export class NewBookFormComponent implements OnInit {
   ];
 
   constructor(
-    private route: ActivatedRoute,
+    private authorService: AuthorService,
     private bookService: BookService,
     private location: Location
   ) {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.authorService
+      .getAuthors()
+      .subscribe((authors) => (this.authors = authors));
+  }
 
   addNewBook() {
     if (this.name.trim()) {

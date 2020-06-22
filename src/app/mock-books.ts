@@ -7,7 +7,7 @@ export const BOOKS: Book[] = [
     author: 'Erle Stanley Gardner',
     genre: 'detective novels',
     summary: `One of Perry Mason's trademarks is his ability, in court, to switch the physical evidence in a case. He generally does this with guns or bullets, and it confuses the jury, to his client's advantage. In this case, Perry offers a coroner's inquest two parrots, one of which swore like a muleskinner and was found near the body of a millionaire hermit who had been murdered.
-    Jacques Barzun and Wendell Hertig Taylor, A Catalogue of Crime: "This early Perry Mason is uncommonly full of detection, and the games played in it with parrots do not detract from plausibility. Denouement not huddled—all in all, a model in his special genre.`,
+    Jacques Barzun and Wendell Hertig Taylor, A Catalogue of Crime: "This early Perry Mason is uncommonly full of detection, and the games played in it with parrots do not detract from plausibility. Denouement not huddled—all in all, a model in his special genre."`,
   },
   {
     id: 5,
