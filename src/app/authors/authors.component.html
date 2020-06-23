@@ -12,13 +12,13 @@
           <th>Author</th>
           <th>Author's books</th>
         </tr>
-        <td><p><a routerLink="/author/{{selectedAuthor.id}}">{{selectedAuthor.name}}</a></p></td>
-        <td><p *ngFor="let book of selectedAuthor.books"><a routerLink="/book/{{book.id}}">{{book.name}}</a></p></td>
+        <td><p><a routerLink="/authors/{{selectedAuthor.id}}">{{selectedAuthor.name}}</a></p></td>
+        <td><p *ngFor="let book of selectedAuthor.books"><a routerLink="/books/{{book.id}}">{{book.name}}</a></p></td>
       </table>
     </div>
   </ul>
   <div>
-    <button type="button" class="btn btn-primary" routerLink="/authors/new">Add new author</button>
+    <button type="button" class="btn btn-primary" routerLink="/author/new">Add new author</button>
   </div>
 </div>
 

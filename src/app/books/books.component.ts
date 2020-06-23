@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { BookService } from './../book.service';
+import { AuthorService } from './../author.service';
 import { Book } from '../book';
 
 import { Author } from './../author';
@@ -11,17 +12,17 @@ import { AUTHORS } from './../mock-authors';
   styleUrls: ['./books.component.css'],
 })
 export class BooksComponent implements OnInit {
-  addingBook: boolean;
-  selectedBook: Book;
   books: Book[];
+  authors: Author[];
 
-  author: Author;
-  selectedAuthor: Author;
-  authors = AUTHORS;
-  constructor(private bookService: BookService) {}
+  constructor(
+    private bookService: BookService,
+    private authorService: AuthorService
+  ) {}
 
   ngOnInit(): void {
     this.getBooks();
+    this.getAuthors();
   }
 
   getBooks(): void {
@@ -31,32 +32,25 @@ export class BooksComponent implements OnInit {
     });
   }
 
-  // onSelectAuthor(author: Author): void {
-  //   this.selectedAuthor = author;
-  //   console.log(typeof author);
-  // }
-
-  // onSelectBook(book: Book): void {
-  //   this.selectedBook = book;
-  //   console.log(book);
-  // }
-
-  showAddBookForm(): void {
-    this.addingBook = true;
+  getAuthors(): void {
+    this.authorService.getAuthors().subscribe((data: any[]) => {
+      console.log(data);
+      this.authors = data;
+    });
   }
 
-  addNewBook(book: Book) {
-    let test = {
-      id: 45,
-      name: book.author,
-      biography: 'qwe',
-      books: [],
-    };
-    test.books.push(book);
+  // addNewBook(book: Book) {
+  //   let test = {
+  //     id: 45,
+  //     name: book.author,
+  //     biography: 'qwe',
+  //     books: [],
+  //   };
+  //   test.books.push(book);
 
-    this.authors.push(test);
-    this.bookService
-      .createBook(book)
-      .subscribe((book) => this.books.push(book));
-  }
+  //   this.authors.push(test);
+  //   this.bookService
+  //     .createBook(book)
+  //     .subscribe((book) => this.books.push(book));
+  // }
 }

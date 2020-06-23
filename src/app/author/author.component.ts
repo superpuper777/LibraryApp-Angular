@@ -2,7 +2,7 @@ import { Component, OnInit, Input } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Location } from '@angular/common';
 
-import { BookService } from './../book.service';
+import { AuthorService } from './../author.service';
 import { Author } from './../author';
 
 @Component({
@@ -16,7 +16,7 @@ export class AuthorComponent implements OnInit {
   @Input() authors: Author[];
   constructor(
     private route: ActivatedRoute,
-    private bookService: BookService,
+    private authorService: AuthorService,
     private location: Location
   ) {}
 
@@ -26,7 +26,7 @@ export class AuthorComponent implements OnInit {
 
   getAuthor(): void {
     const id = +this.route.snapshot.paramMap.get('id');
-    this.bookService
+    this.authorService
       .getAuthor(id)
       .subscribe((author) => (this.author = author));
   }

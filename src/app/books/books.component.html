@@ -2,12 +2,12 @@
   <h2 books__title-text>Books</h2>
   <ul class="books">
       <li *ngFor="let author of authors">
-        <p class="author-book"><a class="author__name" routerLink="/author/{{author.id}}">{{author.name}}</a></p> 
-        <p *ngFor="let book of author.books" class="book__name"><a class="book__name" routerLink="/book/{{book.id}}">{{book.name}}</a></p>
+        <p class="author-book"><a class="author__name" routerLink="/authors/{{author.id}}">{{author.name}}</a></p> 
+        <p *ngFor="let book of author.books" class="book__name"><a class="book__name" routerLink="/books/{{book.id}}">{{book.name}}</a></p>
        </li>  
   </ul>
   <div>
-    <button type="button" class="btn btn-primary" routerLink="/books/new">Add new book</button>
+    <button type="button" class="btn btn-primary" routerLink="/book/new">Add new book</button>
   </div>
 </div>
 

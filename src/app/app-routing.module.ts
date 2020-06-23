@@ -12,10 +12,10 @@ const routes: Routes = [
   { path: '', redirectTo: '/books', pathMatch: 'full' },
   { path: 'books', component: BooksComponent },
   { path: 'authors', component: AuthorsComponent },
-  { path: 'book/:id', component: BookComponent },
-  { path: 'author/:id', component: AuthorComponent },
-  { path: 'books/new', component: NewBookFormComponent },
-  { path: 'authors/new', component: NewAuthorFormComponent },
+  { path: 'books/:id', component: BookComponent },
+  { path: 'authors/:id', component: AuthorComponent },
+  { path: 'book/new', component: NewBookFormComponent },
+  { path: 'author/new', component: NewAuthorFormComponent },
 ];
 
 @NgModule({

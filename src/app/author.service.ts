@@ -3,6 +3,8 @@ import { Observable, throwError } from 'rxjs';
 import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 import { catchError } from 'rxjs/operators';
 
+import { Author } from './author';
+
 @Injectable({
   providedIn: 'root',
 })
@@ -22,9 +24,14 @@ export class AuthorService {
     window.alert(errorMessage);
     return throwError(errorMessage);
   }
-  public getAuthors() {
+  getAuthors(): Observable<Author[]> {
     return this.httpClient
-      .get(this.SERVER_URL)
+      .get<Author[]>(this.SERVER_URL)
       .pipe(catchError(this.handleError));
+  }
+
+  getAuthor(id: number): Observable<Author> {
+    const url = `${this.SERVER_URL}/${id}`;
+    return this.httpClient.get<Author>(url).pipe(catchError(this.handleError));
   }
 }

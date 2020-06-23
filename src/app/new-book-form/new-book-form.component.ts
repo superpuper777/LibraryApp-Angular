@@ -22,6 +22,7 @@ export class NewBookFormComponent implements OnInit {
   @Input() authors;
   @Output() onAddNewBook: EventEmitter<Book> = new EventEmitter();
   book: Book;
+  books: Book[];
 
   genres = [
     'Novel',
@@ -43,20 +44,10 @@ export class NewBookFormComponent implements OnInit {
       .subscribe((authors) => (this.authors = authors));
   }
 
-  addNewBook() {
-    if (this.name.trim()) {
-      const book: Book = {
-        id: this.id,
-        name: this.name,
-        author: this.author,
-        genre: this.genre,
-        summary: this.summary,
-      };
-      console.log(book);
-      this.onAddNewBook.emit(book);
-
-      this.name = this.author = this.summary = '';
-    }
+  addNewBook(book: Book): void {
+    this.bookService.createBook(book).subscribe((book) => {
+      console.log(this.book);
+    });
   }
 
   goBack(): void {
