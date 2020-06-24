@@ -51,4 +51,12 @@ export class BookService {
       .post<Book>(this.SERVER_URL, book, this.httpOptions)
       .pipe(catchError(this.handleError));
   }
+
+  deleteBook(book: Book | number): Observable<Book> {
+    const id = typeof book === 'number' ? book : book.id;
+    const url = `${this.SERVER_URL}/${id}`;
+    return this.httpClient
+      .delete<Book>(url, this.httpOptions)
+      .pipe(catchError(this.handleError));
+  }
 }

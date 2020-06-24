@@ -1,10 +1,14 @@
 import { Author } from './author';
 
-export interface Book {
+export class Book {
   id: number;
-  // id_author: number;
   name: string;
   author: string;
   genre: string;
   summary: string;
+
+  // constructor(name: string, summary: string) {
+  //   this.name = name;
+  //   this.summary = summary;
+  // }
 }

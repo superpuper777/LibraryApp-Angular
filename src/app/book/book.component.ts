@@ -13,9 +13,8 @@ import { Book } from './../book';
 })
 export class BookComponent implements OnInit {
   isShowEdit: boolean = false;
-  @Input() book: Book;
-
-  @Input() books: Book[];
+  book: Book;
+  books: Book[];
   constructor(
     private route: ActivatedRoute,
     private bookService: BookService,
@@ -24,8 +23,15 @@ export class BookComponent implements OnInit {
 
   ngOnInit(): void {
     this.getBook();
+    this.getBooks();
   }
 
+  getBooks(): void {
+    this.bookService.getBooks().subscribe((data: any[]) => {
+      console.log(data);
+      this.books = data;
+    });
+  }
   getBook(): void {
     const id = +this.route.snapshot.paramMap.get('id');
     this.bookService.getBook(id).subscribe((book) => (this.book = book));
@@ -36,8 +42,9 @@ export class BookComponent implements OnInit {
   }
 
   removeBook(book: Book): void {
-    console.log(book);
-    console.log(this.books.filter((b) => b !== book));
+    this.books = this.books.filter((b) => b !== book);
+    this.bookService.deleteBook(book).subscribe();
+    this.location.back();
   }
 
   editBook(book: Book): void {
