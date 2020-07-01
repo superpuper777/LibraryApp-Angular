@@ -1,6 +1,4 @@
-import { Observable } from 'rxjs';
-import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { Component, OnInit } from '@angular/core';
 import { Location } from '@angular/common';
 
 import { BookService } from './../book.service';
@@ -48,21 +46,14 @@ export class NewBookFormComponent implements OnInit {
   }
 
   addNewBook(book: Book, author: Author): void {
-    debugger;
-    console.log(book);
-    // console.log(
-    //   author.books.push({
-    //     id: 20,
-    //     name: 'scvds',
-    //     author: 'new author',
-    //     genre: 'horror',
-    //     summary: 'string summary',
-    //   })
-    // );
-    console.log(author.books);
-    // this.bookService.createBook(book).subscribe((book) => {
-    //   console.log((this.book = book));
-    // });
+    this.authorService
+      .getAuthor(Number(author))
+      .subscribe((author) => console.log((this.author = author)));
+
+    this.bookService.createBook(book).subscribe((book) => {
+      this.book.author = this.author.name;
+      this.author.books.push(book);
+    });
   }
 
   goBack(): void {

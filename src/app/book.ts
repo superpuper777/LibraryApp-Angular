@@ -6,9 +6,4 @@ export class Book {
   author: string;
   genre: string;
   summary: string;
-
-  // constructor(name: string, summary: string) {
-  //   this.name = name;
-  //   this.summary = summary;
-  // }
 }

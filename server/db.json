@@ -47,6 +47,284 @@
     },
     {
       "id": 12
+    },
+    {
+      "id": 13,
+      "name": "New name",
+      "author": "Rex Stout",
+      "genre": "Children's novel",
+      "summary": "New summary"
+    },
+    {
+      "id": 14,
+      "name": "sfs",
+      "author": "",
+      "genre": "Children's novel",
+      "summary": "sfsf"
+    },
+    {
+      "id": 15,
+      "name": "dfwsf",
+      "author": "",
+      "genre": "Children's novel",
+      "summary": "sfsf"
+    },
+    {
+      "id": 16,
+      "name": "sf",
+      "author": "",
+      "genre": "Fantasy",
+      "summary": "sfsf"
+    },
+    {
+      "id": 17,
+      "name": "sfs",
+      "author": "",
+      "genre": "Children's novel",
+      "summary": "sfsf"
+    },
+    {
+      "id": 18,
+      "name": "sfsf",
+      "author": "",
+      "genre": "Children's novel",
+      "summary": "sffs"
+    },
+    {
+      "id": 19,
+      "name": "sf",
+      "genre": "Detective Novel",
+      "summary": "sffs"
+    },
+    {
+      "id": 20,
+      "name": "Last try",
+      "author": "",
+      "genre": "Children's novel",
+      "summary": "Last I fuck this app))) "
+    },
+    {
+      "id": 21,
+      "name": "fslfm",
+      "author": "",
+      "genre": "Horror",
+      "summary": "ssgsgsgsg"
+    },
+    {
+      "id": 22,
+      "name": "sfvfsf",
+      "author": "",
+      "genre": "Children's novel",
+      "summary": "sgsggs"
+    },
+    {
+      "id": 23,
+      "name": "sfsf",
+      "author": "",
+      "genre": "Fantasy",
+      "summary": "sfsfsf"
+    },
+    {
+      "id": 24,
+      "name": "fdfd",
+      "author": "",
+      "genre": "Fantasy",
+      "summary": "dfdfswfvwf"
+    },
+    {
+      "id": 25,
+      "name": "sfsfvsf",
+      "author": "",
+      "genre": "Children's novel",
+      "summary": "sfvsfvsfvwfelrbvekrbqjhavbfkdbv k"
+    },
+    {
+      "id": 26,
+      "name": "sfsg",
+      "author": "",
+      "genre": "Children's novel",
+      "summary": "dgdg"
+    },
+    {
+      "id": 27,
+      "name": "sfsgsf",
+      "genre": "Horror",
+      "summary": "dgdg"
+    },
+    {
+      "id": 28,
+      "name": "ssf",
+      "author": "",
+      "genre": "Horror",
+      "summary": "sfsfgg"
+    },
+    {
+      "id": 29,
+      "name": "ssf",
+      "author": "",
+      "genre": "Horror",
+      "summary": "sfsfgg"
+    },
+    {
+      "id": 30,
+      "name": "dsvsf",
+      "author": "",
+      "genre": "Fantasy",
+      "summary": "sdvsdv"
+    },
+    {
+      "id": 31,
+      "name": "dgsg",
+      "author": "",
+      "genre": "Children's novel",
+      "summary": "sfvsfgbsfb"
+    },
+    {
+      "id": 32,
+      "name": "sfbsdb",
+      "author": "",
+      "genre": "Fantasy",
+      "summary": "sfbfsjbvlaweb"
+    },
+    {
+      "id": 33,
+      "name": "sfsg",
+      "author": "",
+      "genre": "Children's novel",
+      "summary": "afwvetadb"
+    },
+    {
+      "id": 34,
+      "name": "srbvewfb",
+      "author": "",
+      "genre": "Fantasy",
+      "summary": "sfbrwljbjvbwlvbs"
+    },
+    {
+      "id": 35,
+      "name": "dksafj",
+      "author": "",
+      "genre": "Fantasy",
+      "summary": "adfklnldanvqa"
+    },
+    {
+      "id": 36,
+      "name": "svsdv",
+      "author": "",
+      "genre": "Children's novel",
+      "summary": "dsvsdv"
+    },
+    {
+      "id": 37,
+      "name": "NAme",
+      "author": "",
+      "genre": "Children's novel",
+      "summary": "New sim"
+    },
+    {
+      "id": 38,
+      "name": "dfsf",
+      "author": "",
+      "genre": "Children's novel",
+      "summary": "dgbdgb"
+    },
+    {
+      "id": 39,
+      "name": "rkvme",
+      "author": "",
+      "genre": "Fantasy",
+      "summary": "erwdbvwer"
+    },
+    {
+      "id": 40,
+      "name": "svdsd",
+      "author": "",
+      "genre": "Detective Novel",
+      "summary": ""
+    },
+    {
+      "id": 41,
+      "name": "dsvds",
+      "author": "",
+      "genre": "Detective Novel",
+      "summary": "sdvsdv"
+    },
+    {
+      "id": 42,
+      "name": "dsvds",
+      "author": "Erle Stanley Gardner",
+      "genre": "Detective Novel",
+      "summary": "sdvsdv"
+    },
+    {
+      "id": 43,
+      "name": "New",
+      "author": "Erle Stanley Gardner",
+      "genre": "Horror",
+      "summary": "Angular is running in the development mode. Call enableProdMode() to enable the production mode."
+    },
+    {
+      "id": 44,
+      "name": "Name",
+      "author": "",
+      "genre": "Detective Novel",
+      "summary": "MUSLLS"
+    },
+    {
+      "id": 45,
+      "name": "New name ",
+      "author": "",
+      "genre": "Fantasy",
+      "summary": "Angular is running in the development mode. Call enableProdMode() to enable the production mode.Angular is running in the development mode. Call enableProdMode() to enable the production mode."
+    },
+    {
+      "id": 46,
+      "name": "dsvdsv",
+      "author": "",
+      "genre": "Fantasy",
+      "summary": "svsdvds gf n"
+    },
+    {
+      "id": 47,
+      "name": "asdasf",
+      "author": "",
+      "genre": "Children's novel",
+      "summary": "sdgdsg"
+    },
+    {
+      "id": 48,
+      "name": "fsfs",
+      "author": "",
+      "genre": "Fantasy",
+      "summary": "dgdg"
+    },
+    {
+      "id": 49,
+      "name": "sgsg",
+      "author": "",
+      "genre": "Fantasy",
+      "summary": "fhfhs"
+    },
+    {
+      "id": 50,
+      "name": "ыаыа",
+      "author": "",
+      "genre": "Children's novel",
+      "summary": "впвп"
+    },
+    {
+      "id": 51,
+      "name": "sf",
+      "author": "",
+      "genre": "Children's novel",
+      "summary": "sfsf"
+    },
+    {
+      "id": 52,
+      "name": "adfa",
+      "author": "",
+      "genre": "Horror",
+      "summary": "sfsf"
     }
   ],
   "authors": [

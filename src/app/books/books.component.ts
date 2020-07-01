@@ -4,7 +4,6 @@ import { AuthorService } from './../author.service';
 import { Book } from '../book';
 
 import { Author } from './../author';
-import { AUTHORS } from './../mock-authors';
 
 @Component({
   selector: 'app-books',
@@ -38,19 +37,4 @@ export class BooksComponent implements OnInit {
       this.authors = data;
     });
   }
-
-  // addNewBook(book: Book) {
-  //   let test = {
-  //     id: 45,
-  //     name: book.author,
-  //     biography: 'qwe',
-  //     books: [],
-  //   };
-  //   test.books.push(book);
-
-  //   this.authors.push(test);
-  //   this.bookService
-  //     .createBook(book)
-  //     .subscribe((book) => this.books.push(book));
-  // }
 }
